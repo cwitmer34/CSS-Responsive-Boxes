@@ -1,3 +1,48 @@
 body {
   background: blanchedalmond;
 }
+
+* {
+  border: 2px solid black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.a,
+.c {
+  flex-grow: 1;
+}
+
+.b {
+  flex-grow: 3;
+}
+
+.a,
+.b,
+.c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .a,
+  .b,
+  .c {
+    margin: 1em;
+  }
+  .a {
+    width: 100%;
+  }
+}
